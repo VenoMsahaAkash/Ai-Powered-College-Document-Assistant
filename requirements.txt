@@ -1,0 +1,34 @@
+# ════════════════════════════════════════════════════════
+#  requirements.txt — All Python packages needed
+# ════════════════════════════════════════════════════════
+#
+#  Install everything with:
+#      pip install -r requirements.txt
+#
+#  This may take 5-10 minutes on first run (downloading
+#  the SentenceTransformer model ~80MB)
+
+# ── Core Framework ──────────────────────────────────────
+streamlit>=1.32.0           # Web UI framework
+
+# ── LangChain (the RAG orchestration layer) ─────────────
+langchain>=0.2.0            # Core LangChain
+langchain-community>=0.2.0  # Community loaders (PDF, Text, etc.)
+langchain-google-genai>=1.0.0  # Gemini integration
+
+# ── LLM — Google Gemini ─────────────────────────────────
+google-generativeai>=0.7.0  # Google's Gemini API client
+
+# ── Embeddings — runs locally, no API cost ──────────────
+sentence-transformers>=2.7.0  # Includes all-MiniLM-L6-v2
+
+# ── Vector Database ─────────────────────────────────────
+faiss-cpu>=1.8.0             # Facebook's fast vector search (CPU version)
+
+# ── PDF Reading ─────────────────────────────────────────
+PyPDF2>=3.0.0                # PDF text extraction
+pypdf>=4.0.0                 # Alternative PDF reader (used by LangChain)
+
+# ── Utilities ───────────────────────────────────────────
+numpy>=1.24.0                # Numerical operations (used by FAISS)
+python-dotenv>=1.0.0         # Load .env files for API keys
